@@ -56,7 +56,7 @@ const Navbar = () => {
                 </div>
             </div>
             {menuBar && (
-                    <div className="lg:hidden backdrop-blur-lg w-full p-12 flex flex-col justify-center items-center bg-neutral-800 space-y-6">
+                    <div className="fixed lg:hidden backdrop-blur-lg w-full p-12 flex flex-col justify-center items-center bg-neutral-800 space-y-6">
                         {navItems.map((item, index)=> (
                             <a 
                                 key={index} 
@@ -68,7 +68,7 @@ const Navbar = () => {
                             </a>
                         ))}
                     </div>
-                )}
+            )}
         </nav>
     )
 }
