@@ -23,8 +23,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg">
-            <div className="flex justify-between items-center ml-5 mr-5 p-3 border-b border-neutral-300">
+        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
+            <div className="flex justify-between items-center mx-5 p-3 ">
                 <img 
                     src={Logo2} 
                     alt="logo"
@@ -56,18 +56,18 @@ const Navbar = () => {
                 </div>
             </div>
             {menuBar && (
-                    <div className="fixed lg:hidden backdrop-blur-lg w-full p-12 flex flex-col justify-center items-center bg-neutral-800 space-y-6">
-                        {navItems.map((item, index)=> (
-                            <a 
-                                key={index} 
-                                href={item.href}
-                                onClick={(e) => handleScroll(e, link.href)}
-                                className="tracking-tighter text-xl"
-                            >
-                                {item.label}
-                            </a>
-                        ))}
-                    </div>
+                <div className="fixed top-[88px] left-0 right-0 lg:hidden backdrop-blur-lg w-full p-12 flex flex-col justify-center items-center bg-neutral-950/50 space-y-6">
+                    {navItems.map((item, index)=> (
+                        <a 
+                            key={index} 
+                            href={item.href}
+                            onClick={(e) => handleScroll(e, item.href)}
+                            className="tracking-tighter text-xl"
+                        >
+                            {item.label}
+                        </a>
+                    ))}
+                </div>
             )}
         </nav>
     )
