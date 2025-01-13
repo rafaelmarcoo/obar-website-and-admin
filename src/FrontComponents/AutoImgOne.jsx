@@ -1,12 +1,12 @@
-import { autoArrayTwo } from "../constants"
 import { useState, useEffect } from "react"
+import { autoArrayOne } from "../constants"
 
-const AutoImgTwo = () => {
-    const duplicatedImgs = [...autoArrayTwo, ...autoArrayTwo];
+const AutoImgOne = () => {
+    const duplicatedImgs = [...autoArrayOne, ...autoArrayOne];
     const [scrollPos, setScrollPos] = useState(0);
 
     useEffect(() => {
-        const scrollContainer = document.getElementById('gallery-container-two');
+        const scrollContainer = document.getElementById('gallery-container-one');
 
         const handleScroll = () => {
             if(scrollContainer) {
@@ -24,7 +24,7 @@ const AutoImgTwo = () => {
             }
         };
 
-        const animation = setInterval(animate, 30);
+        const animation = setInterval(animate, 20);
         scrollContainer?.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -34,14 +34,14 @@ const AutoImgTwo = () => {
     }, [scrollPos]);
 
     return (
-    <div className="w-full bg-yellow-700 py-12">
+    <div className="w-full bg-orange-200 py-12">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div
-                id="gallery-container-two" 
+                id="gallery-container-one"
                 className="flex overflow-x-hidden gap-4 py-4 select-none"
             >
                 {duplicatedImgs.map((image, index) => (
-                    <div
+                    <div 
                         key={`${image.id}-${index}`}
                         className="flex-none w-80 h-60 relative rounded-lg overflow-hidden transform transition-transform hover:scale-105"
                     >
@@ -58,4 +58,4 @@ const AutoImgTwo = () => {
     )
 }
 
-export default AutoImgTwo
+export default AutoImgOne
