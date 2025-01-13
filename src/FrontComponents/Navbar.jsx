@@ -23,7 +23,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
+        <nav className="sticky top-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
             <div className="flex justify-between items-center mx-5 p-3 ">
                 <img 
                     src={Logo2} 

@@ -2,8 +2,8 @@ import homeImg from "../assets/Home.jpg";
 
 const HomeSection = () => {
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 h-full w-full overflow-hidden">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-24">
+        <div className="absolute inset-0 h-full w-full">
             <img
                 src={homeImg} 
                 alt="homeImg"
