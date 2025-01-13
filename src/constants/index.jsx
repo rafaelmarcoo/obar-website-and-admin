@@ -13,6 +13,17 @@ import autoOne6 from "../assets/autoslide1/6.jpg";
 import autoOne7 from "../assets/autoslide1/7.jpg";
 import autoOne8 from "../assets/autoslide1/8.jpg";
 
+import Menu1 from "../assets/Menu/Menu1.jpg";
+import Menu2 from "../assets/Menu/Menu2.jpg";
+import Menu3 from "../assets/Menu/Menu3.jpg";
+import Menu4 from "../assets/Menu/Menu4.jpg";
+import Menu5 from "../assets/Menu/Menu5.jpg";
+import Menu6 from "../assets/Menu/Menu6.jpg";
+import Menu7 from "../assets/Menu/Menu7.jpg";
+import Menu8 from "../assets/Menu/Menu8.jpg";
+import Menu9 from "../assets/Menu/Menu9.jpg";
+import Menu10 from "../assets/Menu/Menu10.jpg";
+
 export const navItems = [
     {
         label: "Home", href: "home"
@@ -84,4 +95,47 @@ export const autoArrayTwo = [
         id: 5,
         src: autoTwo5,
     }
+]
+
+export const menuArray = [
+    {
+        id: 1,
+        src: Menu1,
+    },
+    {
+        id: 2,
+        src: Menu2,
+    },
+    {
+        id: 3,
+        src: Menu3,
+    },
+    {
+        id: 4,
+        src: Menu4,
+    },
+    {
+        id: 5,
+        src: Menu5,
+    },
+    {
+        id: 6,
+        src: Menu6,
+    },
+    {
+        id: 7,
+        src: Menu7,
+    },
+    {
+        id: 8,
+        src: Menu8,
+    },
+    {
+        id: 9,
+        src: Menu9,
+    },
+    {
+        id: 10,
+        src: Menu10,
+    },
 ]

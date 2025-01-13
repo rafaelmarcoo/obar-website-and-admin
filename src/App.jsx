@@ -3,6 +3,8 @@ import Navbar from './FrontComponents/Navbar'
 import HomeSection from './FrontComponents/HomeSection'
 import AutoImgTwo from './FrontComponents/AutoImgTwo'
 import AutoImgOne from './FrontComponents/AutoImgOne'
+import MenuSection from './FrontComponents/MenuSection'
+
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
       <HomeSection />
       <AutoImgOne />
       <AutoImgTwo />
+      <MenuSection />
     </main>
   )
 }
