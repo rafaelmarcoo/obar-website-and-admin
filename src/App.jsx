@@ -9,7 +9,7 @@ import ContactSection from './FrontComponents/ContactSection'
 
 const App = () => {
   return (
-    <main className='overflow-y-hidden text-neutral-200 antialiased'>
+    <main className='pt-[113px] overflow-y-hidden text-neutral-200 antialiased'>
       <Navbar />
       <HomeSection />
       <AutoImgOne />

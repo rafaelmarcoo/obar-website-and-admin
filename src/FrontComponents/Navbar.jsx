@@ -23,19 +23,24 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="sticky top-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
+        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
             <div className="flex justify-between items-center mx-5 p-3 ">
-                <img 
-                    src={Logo2} 
-                    alt="logo"
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-full transition-transform hover:scale-105"
-                />
+                <a 
+                    href={`#${home}`}
+                    onClick={(e) => handleScroll(e, "home")}
+                >
+                    <img 
+                        src={Logo2} 
+                        alt="logo"
+                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full transition-transform hover:scale-105"
+                    />
+                </a>
                 <div className="hidden space-x-6 lg:flex">
                     {navItems.map((item, index)=> (
                         <a 
                             key={index} 
-                            href={item.href}
-                            onClick={(e) => handleScroll(e, link.href)}
+                            href={`#${item.href}`}
+                            onClick={(e) => handleScroll(e, item.href)}
                             className="text-xl font-medium hover:text-red-400 transition-colors duration-200"
                         >
                             {item.label}
@@ -45,7 +50,9 @@ const Navbar = () => {
                 <div className="hidden lg:flex justify-center items-center text-xl">
                     <a 
                         className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md"
-                        href="#contact">
+                        href={`#${contact}`}
+                        onClick={(e) => handleScroll(e, "contact")}
+                    >
                         Book Now!
                     </a>
                 </div>

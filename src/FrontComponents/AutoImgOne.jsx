@@ -34,7 +34,7 @@ const AutoImgOne = () => {
     }, [scrollPos]);
 
     return (
-    <div className="w-full bg-orange-200 py-12">
+    <div id="gallery" className="w-full bg-orange-200 py-12">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
             <div
                 id="gallery-container-one"
