@@ -4,6 +4,7 @@ import HomeSection from './FrontComponents/HomeSection'
 import AutoImgTwo from './FrontComponents/AutoImgTwo'
 import AutoImgOne from './FrontComponents/AutoImgOne'
 import MenuSection from './FrontComponents/MenuSection'
+import ContactSection from './FrontComponents/ContactSection'
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <AutoImgOne />
       <AutoImgTwo />
       <MenuSection />
+      <ContactSection />
     </main>
   )
 }
