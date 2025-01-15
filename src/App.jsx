@@ -9,12 +9,15 @@ import ContactSection from './FrontComponents/ContactSection'
 
 const App = () => {
   useEffect(() => {
-    const homeSection = document.getElementById('home');
-    if(homeSection) {
-      window.scrollTo({
-        top: homeSection.offsetTop - 80,
-        behavior: 'smooth',
-      });
+    // const homeSection = document.getElementById('home');
+    // if(homeSection) {
+    //   window.scrollTo({
+    //     top: homeSection.offsetTop - 80,
+    //     behavior: 'smooth',
+    //   });
+    // }
+    if (!window.location.hash) {
+      window.location.hash = '#home';
     }
   }, []);
 
