@@ -8,21 +8,6 @@ import ContactSection from './FrontComponents/ContactSection'
 
 
 const App = () => {
-  useEffect(() => {
-    if (!window.location.hash) {
-      window.location.hash = '#home';
-    } else {
-      const targetId = window.location.hash.substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth',
-        });
-      }
-    }
-  }, []);
-  
   return (
     <main className='pt-[113px] overflow-y-hidden text-neutral-200 antialiased'>
       <Navbar />
