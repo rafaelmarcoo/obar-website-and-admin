@@ -33,15 +33,15 @@ const MenuSection = () => {
                     </div>
                     <div className="space-y-6">
                         <h2 className="text-3xl font-bold text-center">Our Menu:</h2>
-                        <div className="overflow-hidden h-[600px] relative rounded-lg">
+                        <div className="overflow-hidden relative rounded-lg h-[600px]">
                             <div 
-                                className="flex transition-transform duration-500 ease-out"
+                                className="h-full flex transition-transform duration-1000 ease-out"
                                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                             >
                                 {menuArray.map((menu, index) => (
                                     <div 
                                         key={index}
-                                        className="w-full flex-shrink-0"
+                                        className="w-full flex-shrink-0 h-full"
                                     >
                                         <img 
                                             src={menu.src}
@@ -50,7 +50,7 @@ const MenuSection = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex items-center justify-center py-2 gap-5">
+                            <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center gap-5">
                                 <button 
                                     onClick={prevSlide}
                                     className="p-2 rounded-full bg-black/50 hover:bg-black/70 transition-colors"
