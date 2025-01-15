@@ -29,7 +29,7 @@ const HomeSection = () => {
                 <div className="flex lg:hidden justify-center items-center text-xl p-10">
                     <a 
                         className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md"
-                        href={`#contact`}
+                        href={`#${contact}`}
                         onClick={(e) => handleScroll(e, "contact")}>
                         Book Now!
                     </a>
