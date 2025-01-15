@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800 py-3 bg-neutral-950/80 backdrop-blur-lg">
             <div className="flex justify-between items-center mx-5 p-3 ">
                 <a 
-                    href={`#${home}`}
+                    href={"#home"}
                     onClick={(e) => handleScroll(e, "home")}
                 >
                     <img 
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <div className="hidden lg:flex justify-center items-center text-xl">
                     <a 
                         className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md"
-                        href={`#${contact}`}
+                        href={`#contact`}
                         onClick={(e) => handleScroll(e, "contact")}
                     >
                         Book Now!
