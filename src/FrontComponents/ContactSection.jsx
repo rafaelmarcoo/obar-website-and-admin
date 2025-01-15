@@ -1,3 +1,5 @@
+import { Phone } from "lucide-react"
+
 const ContactSection = () => {
 
     return (
@@ -14,13 +16,14 @@ const ContactSection = () => {
                         <h2 className="text-2xl text-center">
                             7 Bacons Lane Unit 114B, 15 Chancery Street Auckland, Auckland, BD 1010
                         </h2>
-                        <h2 className="text-2xl text-center">
-                            02 217 3524
+                        <h2 className="text-2xl text-center justify-center items-center flex">
+                            <Phone className="w-6 h-6 mr-3"></Phone> 
+                            <span className="pb-1">09 217 3524</span>
                         </h2>
                     </div>
                     <div className="space-y-6 border rounded-lg p-5">
-                        <h2 className="text-3xl font-bold text-center mt-12">Book a table with us!</h2>
-                        <form className="flex flex-col space-y-3">
+                        <h2 className="text-3xl font-bold text-center mt-5">Book a table with us!</h2>
+                        <form className="flex flex-col space-y-6">
                             <label>Full Name</label>
                             <input 
                                 type="text"
@@ -41,7 +44,7 @@ const ContactSection = () => {
                                 type="time"
                                 className="p-2" 
                             />
-                            <button className="mt-3 p-3 border bg-neutral-800 border-blue-700">
+                            <button className="mt-3 p-3 border bg-neutral-800 border-blue-700 ">
                                 Book Now!
                             </button>
                         </form>
