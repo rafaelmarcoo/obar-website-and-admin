@@ -44,7 +44,7 @@ const App = () => {
           }
         />
         <Route 
-          path="/admin/login" element={<LoginSection setToken={setToken} />}
+          path="/admin" element={<LoginSection setToken={setToken} />}
         />
         {token ? 
           <Route 
