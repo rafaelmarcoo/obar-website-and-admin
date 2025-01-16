@@ -59,7 +59,7 @@ const ContactSection = () => {
                             </h2>
                         </div>
                     </div>
-                    <div className="space-y-6 border rounded-lg p-5">
+                    <div className="space-y-6 border border-orange-300 rounded-lg p-5">
                         <h2 className="text-3xl font-bold text-center mt-5">Book a table with us!</h2>
                         <form 
                             className="flex flex-col space-y-6"
@@ -97,8 +97,8 @@ const ContactSection = () => {
                                 value={bookingForm.time}
                                 className="p-2" 
                             />
-                            <button type="submit "className="mt-3 p-3 border bg-neutral-800 border-blue-700 ">
-                                Book Now!
+                            <button type="submit "className="mt-3 p-3 bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md ">
+                                Book Table
                             </button>
                         </form>
                     </div>
