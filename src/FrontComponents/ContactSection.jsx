@@ -20,22 +20,27 @@ const ContactSection = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const { data, error } = await supabase
+
+        const isConfirmed = window.confirm("Place booking for " + bookingForm.name + " for " + bookingForm.pax + " pax\n" + bookingForm.date + " " + bookingForm.time);
+        if(isConfirmed) {
+            const { data, error } = await supabase
             .from("bookings")
             .insert([bookingForm])
             .single();
 
-        if(error) {
-            alert("Error booking: ", error);
-        } else {
-            alert("Booking added!");
-            setBookingForm({
-                name: "",
-                pax: "",
-                date: "",
-                time: "",
-            });
+            if(error) {
+                alert("Error booking: ", error);
+            } else {
+                alert("Thank you for booking! See you soon!");
+                setBookingForm({
+                    name: "",
+                    pax: "",
+                    date: "",
+                    time: "",
+                });
+            }
         }
+        
     }
 
     return (
