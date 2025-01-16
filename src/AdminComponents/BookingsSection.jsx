@@ -15,6 +15,7 @@ const BookingsSection = () => {
         const today = new Date();
         return today.toISOString().split("T")[0];
     });
+    const [totalPax, setTotalPax] = useState(0);
     
     const fetchData = async (date) => {
         try {
@@ -27,6 +28,9 @@ const BookingsSection = () => {
             }
 
             setBookings(data);
+
+            const totalPaxCount = data.reduce((total, booking) => total += booking.pax, 0);
+            setTotalPax(totalPaxCount);
         } catch(error) {
             alert(error);
         }
@@ -48,6 +52,8 @@ const BookingsSection = () => {
         setSelectedDate(newDate.toISOString().split("T")[0]);
     }
 
+
+
     return (
         <div className="text-lg max-w-7xl mx-auto px-4">
             <div className="text-bold text-center mt-10">
@@ -65,7 +71,12 @@ const BookingsSection = () => {
                         className="h-6 w-6 ml-5 hover:text-blue-500 hover:bg-neutral-400 rounded-full transition-colors duration-200 cursor-pointer"
                     /> 
                 </h2>
-                
+                <h2 className="font-semibold text-2xl mt-2">Total Pax: 
+                    <span className="bg-gradient-to-r from-violet-200 to-violet-500 bg-clip-text text-transparent">
+                        {" "}
+                        {totalPax}
+                    </span>
+                </h2>
                 {bookings.length > 0 ? (
                     <div className="mt-10 overflow-x-auto">
                         <table className="table-auto border-collapse border border-gray-300 mx-auto w-full lg:w-2/3 shadow-md">
@@ -84,7 +95,7 @@ const BookingsSection = () => {
                                             index % 2 === 0
                                                 ? "bg-gray-600 text-white"
                                                 : "bg-gray-300 text-black"
-                                        } hover:bg-orange-500 transition-colors duration-200`}
+                                        } hover:bg-violet-800 transition-colors duration-200`}
                                     >
                                         <td className="p-2 border border-gray-200 text-center">{booking.time}</td>
                                         <td className="p-2 border border-gray-200 text-center">{booking.pax}</td>
