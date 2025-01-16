@@ -8,6 +8,7 @@ import MenuSection from './FrontComponents/MenuSection'
 import ContactSection from './FrontComponents/ContactSection'
 import Footer from './FrontComponents/Footer'
 import LoginSection from './AdminComponents/LoginSection';
+import BookingsSection from './AdminComponents/BookingsSection';
 
 
 const App = () => {
@@ -29,7 +30,10 @@ const App = () => {
           }
         />
         <Route 
-          path="/admin" element={<LoginSection />}
+          path="/admin/login" element={<LoginSection />}
+        />
+        <Route 
+          path="/admin/bookings" element={<BookingsSection />}
         />
       </Routes>
     </Router>
