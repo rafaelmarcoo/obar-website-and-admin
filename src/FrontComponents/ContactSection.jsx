@@ -110,7 +110,7 @@ const ContactSection = () => {
                 </div>
                 
             </div>
-            <div className="text-center mt-10">
+            <div className="text-center mt-20">
                     <h3 className="text-xl font-bold">
                         Opening Hours:
                     </h3>
