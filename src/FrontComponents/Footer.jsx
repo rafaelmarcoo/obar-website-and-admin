@@ -15,6 +15,7 @@ const Footer = () => {
                     </a>
                 </h2>
                 <a
+                    href="/admin"
                     className="hover:text-blue-400 transition-colors duration-200 mt-5"
                 >
                     <Home />
