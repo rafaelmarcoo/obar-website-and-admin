@@ -1,6 +1,7 @@
 import supabase from "../supabase-client";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Home } from "lucide-react";
 
 const LoginSection = ({setToken}) => {
     const navigate = useNavigate();
@@ -39,6 +40,10 @@ const LoginSection = ({setToken}) => {
         }
     }
 
+    const handleGoHome = () => {
+        navigate("/");
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="bg-neutral-800 space-y-6 max-w-lg border border-orange-300 p-8 mx-auto flex items-center justify-center rounded-lg shadow-lg">
@@ -48,7 +53,7 @@ const LoginSection = ({setToken}) => {
                     </h2>
                     <form 
                         onSubmit={handleSubmit}
-                        className="mt-8 flex flex-col space-y-6"
+                        className="mt-8 flex flex-col items-center space-y-6"
                     >
                         <div className="flex flex-col">
                             <label className="text-left text-lg font-semibold">Username:</label>
@@ -74,6 +79,10 @@ const LoginSection = ({setToken}) => {
                         >
                             Log In
                         </button>
+                        <Home 
+                            onClick={handleGoHome} 
+                            className="hover:text-blue-500 transition-colors duration-200 cursor-pointer w-10 h-10"
+                        />
                     </form>
                 </div>
             </div>
