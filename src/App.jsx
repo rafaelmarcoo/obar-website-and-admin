@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './FrontComponents/Navbar'
 import HomeSection from './FrontComponents/HomeSection'
@@ -12,6 +13,19 @@ import BookingsSection from './AdminComponents/BookingsSection';
 
 
 const App = () => {
+  const [token, setToken] = useState(false);
+
+  if(token) {
+    sessionStorage.setItem('token', JSON.stringify(token))
+  }
+
+  useEffect(() => {
+    if(sessionStorage.getItem('token')) {
+      let data = JSON.parse(sessionStorage.getItem('token'));
+      setToken(data);
+    }
+  }, [])
+
   return (
     <Router>
       <Routes>
@@ -30,11 +44,14 @@ const App = () => {
           }
         />
         <Route 
-          path="/admin/login" element={<LoginSection />}
+          path="/admin/login" element={<LoginSection setToken={setToken} />}
         />
-        <Route 
-          path="/admin/bookings" element={<BookingsSection />}
-        />
+        {token ? 
+          <Route 
+            path="/admin/bookings" 
+            element={<BookingsSection />} 
+          /> 
+          : ""}
       </Routes>
     </Router>
   )

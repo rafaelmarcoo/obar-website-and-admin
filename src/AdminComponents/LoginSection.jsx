@@ -2,7 +2,7 @@ import supabase from "../supabase-client";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const LoginSection = () => {
+const LoginSection = ({setToken}) => {
     const navigate = useNavigate();
 
     const [credentials, setCredentials] = useState({
@@ -31,6 +31,7 @@ const LoginSection = () => {
                 alert(error);
             } else {
                 alert("Logged in successfully");
+                setToken(data);
                 navigate("/admin/bookings");
             }
         } catch(error) {

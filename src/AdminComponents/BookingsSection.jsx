@@ -1,6 +1,6 @@
 const BookingsSection = () => {
   return (
-    <div></div>
+    <div>dwadawwa</div>
   )
 }
 
