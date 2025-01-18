@@ -59,9 +59,9 @@ const ContactSection = () => {
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.767727047948!2d174.7678528!3d-36.8480385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47bec93bfb5b%3A0xa36962ea4ec61942!2sObar%20%26%20OBar%20Snack!5e0!3m2!1sen!2snz!4v1736908812807!5m2!1sen!2snz" width="600" height="500" style={{border:"0"}} allowFullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div> 
                         <div>
-                            <h2 className="text-3xl font-medium py-5 text-center justify-center items-center flex hover:text-red-400 transition-colors duration-200 focus:outline-offset-2 m">
-                                <MapPinned className="w-6 h-6 mr-3 flex-shrink-0" />
-                                <span>
+                            <h2 className="text-3xl font-medium py-5 text-center justify-center items-center flex hover:text-red-400 transition-colors duration-200 focus:outline-offset-2">
+                                <MapPinned className="w-6 h-6 flex-shrink-0" />
+                                <span className="mr-8">
                                     7 Bacons Lane Unit 114B, 15 Chancery Street Auckland, Auckland, BD 1010
                                 </span>
                             </h2>
