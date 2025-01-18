@@ -85,6 +85,8 @@ const BookingsSection = () => {
                                     <th className="p-2 border border-gray-200">Time</th>
                                     <th className="p-2 border border-gray-200">Pax</th>
                                     <th className="p-2 border border-gray-200">Name</th>
+                                    <th className="p-2 border border-gray-200">Email</th>
+                                    <th className="p-2 border border-gray-200">Phone</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -100,6 +102,8 @@ const BookingsSection = () => {
                                         <td className="p-2 border border-gray-200 text-center">{booking.time}</td>
                                         <td className="p-2 border border-gray-200 text-center">{booking.pax}</td>
                                         <td className="p-2 border border-gray-200 text-center">{booking.name}</td>
+                                        <td className="p-2 border border-gray-200 text-center">{booking.email}</td>
+                                        <td className="p-2 border border-gray-200 text-center">{booking.phone}</td>
                                     </tr>
                                 ))}
                             </tbody>
