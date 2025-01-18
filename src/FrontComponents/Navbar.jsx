@@ -49,7 +49,7 @@ const Navbar = () => {
                 </div>
                 <div className="hidden lg:flex justify-center items-center text-xl">
                     <a 
-                        className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md"
+                        className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md transition-transform hover:scale-105"
                         href={`#contact`}
                         onClick={(e) => handleScroll(e, "contact")}
                     >

@@ -28,7 +28,7 @@ const HomeSection = () => {
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-neutral-200 max-w-2xl mx-auto leading-relaxed">Savor the Authentic Korean Flavors of Korea. Experience the Perfect Blend of Tradition and Taste</h2>
                 <div className="flex lg:hidden justify-center items-center text-xl p-10">
                     <a 
-                        className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md"
+                        className="bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md transition-transform hover:scale-105"
                         href={"contact"}
                         onClick={(e) => handleScroll(e, "contact")}>
                         Book Now!

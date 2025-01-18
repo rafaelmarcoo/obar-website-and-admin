@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react"
+import { Phone, MapPinned } from "lucide-react"
 import { useState } from "react"
 import supabase from "../supabase-client";
 
@@ -6,6 +6,8 @@ const ContactSection = () => {
     const [bookingForm, setBookingForm] = useState({
         name: "",
         pax: "",
+        email: "",
+        phone: "",
         date: "",
         time: "",
     });
@@ -35,6 +37,8 @@ const ContactSection = () => {
                 setBookingForm({
                     name: "",
                     pax: "",
+                    email: "",
+                    phone: "",
                     date: "",
                     time: "",
                 });
@@ -52,13 +56,16 @@ const ContactSection = () => {
                             Find Us!
                         </h2>
                         <div className="overflow-hidden">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.767727047948!2d174.7678528!3d-36.8480385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47bec93bfb5b%3A0xa36962ea4ec61942!2sObar%20%26%20OBar%20Snack!5e0!3m2!1sen!2snz!4v1736908812807!5m2!1sen!2snz" width="600" height="450" style={{border:"0"}} allowFullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.767727047948!2d174.7678528!3d-36.8480385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47bec93bfb5b%3A0xa36962ea4ec61942!2sObar%20%26%20OBar%20Snack!5e0!3m2!1sen!2snz!4v1736908812807!5m2!1sen!2snz" width="600" height="500" style={{border:"0"}} allowFullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div> 
                         <div>
-                            <h2 className="text-xl text-center">
-                                7 Bacons Lane Unit 114B, 15 Chancery Street Auckland, Auckland, BD 1010
+                            <h2 className="text-3xl font-medium py-5 text-center justify-center items-center flex hover:text-red-400 transition-colors duration-200 focus:outline-offset-2 m">
+                                <MapPinned className="w-16 mr-3" />
+                                <span>
+                                    7 Bacons Lane Unit 114B, 15 Chancery Street Auckland, Auckland, BD 1010
+                                </span>
                             </h2>
-                            <h2 className="mt-4 text-xl text-center justify-center items-center flex">
+                            <h2 className="mt-4 text-3xl font-medium text-center justify-center items-center flex hover:text-orange-400 transition-colors duration-200">
                                 <Phone className="w-6 h-6 mr-3"></Phone> 
                                 <span className="pb-1">09 217 3524</span>
                             </h2>
@@ -76,7 +83,7 @@ const ContactSection = () => {
                                 name="name"
                                 onChange={handleChange}
                                 value={bookingForm.name}
-                                className="p-2" 
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
                             />
                             <label>For how many people?</label>
                             <input 
@@ -84,7 +91,23 @@ const ContactSection = () => {
                                 name="pax"
                                 onChange={handleChange}
                                 value={bookingForm.pax}
-                                className="p-2" 
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                            />
+                            <label>Email Address</label>
+                            <input 
+                                type="email"
+                                name="email"
+                                onChange={handleChange}
+                                value={bookingForm.email}
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                            />
+                            <label>Phone Number</label>
+                            <input 
+                                type="number"
+                                name="phone"
+                                onChange={handleChange}
+                                value={bookingForm.phone}
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
                             />
                             <label>Date</label>
                             <input 
@@ -92,7 +115,7 @@ const ContactSection = () => {
                                 name="date"
                                 onChange={handleChange}
                                 value={bookingForm.date}
-                                className="p-2" 
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
                             />
                             <label>Time</label>
                             <input 
@@ -100,9 +123,9 @@ const ContactSection = () => {
                                 name="time"
                                 onChange={handleChange}
                                 value={bookingForm.time}
-                                className="p-2" 
+                                className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
                             />
-                            <button type="submit "className="mt-3 p-3 bg-gradient-to-r from-red-300 to-red-600 p-2 rounded-md ">
+                            <button type="submit "className="mt-3 p-3 bg-gradient-to-r from-red-300 to-red-600 rounded-md hover:scale-105 transition-transform">
                                 Book Table
                             </button>
                         </form>
