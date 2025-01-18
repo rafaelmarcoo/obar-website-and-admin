@@ -60,7 +60,7 @@ const ContactSection = () => {
                         </div> 
                         <div>
                             <h2 className="text-3xl font-medium py-5 text-center justify-center items-center flex hover:text-red-400 transition-colors duration-200 focus:outline-offset-2 m">
-                                <MapPinned className="w-16 mr-3" />
+                                <MapPinned className="w-6 h-6 mr-3 flex-shrink-0" />
                                 <span>
                                     7 Bacons Lane Unit 114B, 15 Chancery Street Auckland, Auckland, BD 1010
                                 </span>
