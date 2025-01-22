@@ -84,6 +84,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.name}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <label>For how many people?</label>
                             <input 
@@ -92,6 +93,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.pax}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <label>Email Address</label>
                             <input 
@@ -100,6 +102,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.email}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <label>Phone Number</label>
                             <input 
@@ -108,6 +111,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.phone}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <label>Date</label>
                             <input 
@@ -116,6 +120,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.date}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <label>Time</label>
                             <input 
@@ -124,6 +129,7 @@ const ContactSection = () => {
                                 onChange={handleChange}
                                 value={bookingForm.time}
                                 className="p-1 border border-neutral-500 rounded-lg focus:border-4 focus:outline-none focus:outline-offset-4 transition-all" 
+                                required
                             />
                             <button type="submit "className="mt-3 p-3 bg-gradient-to-r from-red-300 to-red-600 rounded-md hover:scale-105 transition-transform">
                                 Book Table
