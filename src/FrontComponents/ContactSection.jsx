@@ -67,7 +67,7 @@ const ContactSection = () => {
                             </h2>
                             <h2 className="mt-4 text-3xl font-medium text-center justify-center items-center flex hover:text-orange-400 transition-colors duration-200">
                                 <Phone className="w-6 h-6 mr-3"></Phone> 
-                                <span className="pb-1">09 217 3524</span>
+                                <span className="pb-1">09 216 3524</span>
                             </h2>
                         </div>
                     </div>
