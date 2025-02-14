@@ -9,7 +9,8 @@ Built a modern and user-friendly website for Obar Auckland, a favorite dining sp
  - TailwindCSS: Clean and responsive design
  - Supabase: Authentication & database management
 
-## Features
-✅ Beautiful UI – Showcases a gallery of stunning restaurant photos and happy customers.
-✅ Online Booking System – Customers can easily reserve tables through the website, enhancing convenience.
-✅ Admin Dashboard – Employees can view and manage bookings effortlessly, streamlining the reservation process.
+## Key Features  
+✅ **Beautiful & Responsive UI** – Showcases a gallery of stunning restaurant photos and happy customers.  
+✅ **Online Booking System** – Customers can easily reserve tables, enhancing convenience.  
+✅ **Admin Dashboard** – Employees can view and manage bookings effortlessly, streamlining the reservation process.  
+
