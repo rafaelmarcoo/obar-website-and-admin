@@ -1,8 +1,15 @@
-# React + Vite
+# Obar Auckland Website + Booking System + Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built a modern and user-friendly website for Obar Auckland, a favorite dining spot for my colleagues and me. This project enhances the restaurant’s online presence with an aesthetic front-end, a seamless booking system, and an efficient admin panel for managing reservations.
 
-Currently, two official plugins are available:
+[View Website](https://testobarauckland.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## Technologies Used:
+ - ReactJS: Interactive and dynamic UI
+ - TailwindCSS: Clean and responsive design
+ - Supabase: Authentication & database management
+
+## Features
+- Beautiful UI – Showcases a gallery of stunning restaurant photos and happy customers.
+- Online Booking System – Customers can easily reserve tables through the website, enhancing convenience.
+- Admin Dashboard – Employees can view and manage bookings effortlessly, streamlining the reservation process.
